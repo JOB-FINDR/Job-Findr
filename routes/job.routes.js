@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose');
 const express = require ('express');
 const router = require ('express').Router();
-const Job = require("../models/Job.model")
+const Job = require("../models/job.model")
 
 
 // Create a new job
