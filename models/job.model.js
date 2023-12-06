@@ -19,4 +19,5 @@ const jobSchema = new Schema(
     }
 )
 
-module.exports = model("Job", jobSchema);
+const Job = module.exports = model("Job", jobSchema);
+module.exports = Job;

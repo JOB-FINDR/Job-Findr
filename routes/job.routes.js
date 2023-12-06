@@ -1,6 +1,8 @@
 const mongoose = require ('mongoose');
 const express = require ('express');
 const router = require ('express').Router();
+const Job = require('../models/job.model');
+
 
 router.post('/jobs', (req, res, next) => {
     const {title, company, description, salary} = req.body;
