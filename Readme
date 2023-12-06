@@ -33,6 +33,26 @@ jobId: { type: ObjectId, ref: 'Job', required: true } - Reference to the applied
 userId: { type: ObjectId, ref: 'User', required: true }
 coverLetter: { type: String } - Cover letter submitted by the job seeker.
 
+# Routes
+USER ROUTE --> C
+
+
+
+## JOB ROUTE --> CRUD
+ [x] POST (create a new job)
+ [x] GET (read all jobs)
+ [x] GET (read specific job by id)
+ [x] PUT (update the job by id)
+ [x] DELETE ( delete the job)
+
+## APPLICATION ROUTE --> CRU
+
+ [] POST (Apply for the job)
+ [] GET (See all the jobs)
+ [] PUT (Write a cover letter)
+
+
+
 
 
 ## REST API Endpoints:
