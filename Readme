@@ -31,7 +31,7 @@ salary: { type: Number } - The offered salary.
 Fields:
 jobId: { type: ObjectId, ref: 'Job', required: true } - Reference to the applied job.
 userId: { type: ObjectId, ref: 'User', required: true }
-coverLetter: { type: String } - Cover letter submitted by the job seeker.
+coverLetter: { type: String } - Cover letter submitted by the user
 
 # Routes
 USER ROUTE --> C
@@ -45,11 +45,12 @@ USER ROUTE --> C
  [x] PUT (update the job by id)
  [x] DELETE ( delete the job)
 
-## APPLICATION ROUTE --> CRU
+
+## APPLICATION ROUTE --> CR
 
  [] POST (Apply for the job)
  [] GET (See all the jobs)
- [] PUT (Write a cover letter)
+
 
 
 
@@ -78,3 +79,6 @@ Write a Cover Letter: PUT /api/applications/:id/cover-letter
 [x]Define Models 	   
 [x] what models do we need, what fields for each model
 [x]Define REST API endpoints
+
+
+

@@ -24,6 +24,10 @@ app.use("/auth", authRoutes);
 const jobRouter = require("./routes/job.routes");
 app.use("/api", jobRouter);
 
+const applicationRouter = require("./routes/application.routes");
+app.use("/api", applicationRouter);
+
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
