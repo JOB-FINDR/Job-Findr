@@ -5,14 +5,18 @@ const { Schema, model } = require('mongoose');
 
 const applicationSchema = new Schema(
     {
+        jobId: 
+        { type: Schema.Types.ObjectId, ref: 'Job' },
+        
         fullname:
         {
-            type: "text",
+            type: String,
             required: true,
         },
+        userId: { type: Schema.Types.ObjectId, ref: 'User' },
 
         email: {
-            type: "email",
+            type: String,
             required: true,
         },
 
