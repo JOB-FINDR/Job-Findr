@@ -5,17 +5,26 @@ const { Schema, model } = require('mongoose');
 
 const applicationSchema = new Schema(
     {
-        jobId: 
-             { type: Schema.Types.ObjectId, ref: 'Job' },
+        fullname:
+        {
+            type: "text",
+            required: true,
+        },
 
-        userId: { type: Schema.Types.ObjectId, ref: 'User' },
+        email: {
+            type: "email",
+            required: true,
+        },
 
         coverLetter: {
             type: String,
             required: true
         },
-        cv: {type: String}
-        
+        cv: {
+            type: String,
+            required: true
+        }
+
     }
 )
 
