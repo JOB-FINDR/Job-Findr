@@ -6,9 +6,7 @@ const Job = require("../models/job.model")
 
 // Create a new job
 router.post('/jobs', (req, res, next) => {
-    const {title, company, description, salary} = req.body;
-   
-    Job.create({title, company, description, salary, tasks: []})
+    Job.create(req.body)
       .then(response => res.json(response))
       .catch(err => res.json(err));
   });
@@ -38,8 +36,12 @@ router.get('/jobs/:id', (req, res, next) => {
 router.put('/jobs/:id', (req, res, next) => {
     const jobId = req.params.id;
 
-    Job.findByIdAndUpdate (jobId, req.body, {new: true})
-        .then(updatedJob => res.json(updatedJob))
+    console.log(req.body)
+
+    Job.findByIdAndUpdate(jobId, req.body, {new: true})
+        .then(updatedJob =>
+             {console.log (updatedJob);
+            res.json(updatedJob)})
         .catch(err => res.json(err));
 });
 
