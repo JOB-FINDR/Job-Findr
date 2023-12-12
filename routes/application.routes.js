@@ -20,7 +20,7 @@ router.post('/', (req, res, next) => {
         );
   });
 
- // List all the jobs
+ // List all the applications
   router.get('/applications', (req, res, next) => { 
     Application.find()
 
