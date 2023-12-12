@@ -6,16 +6,22 @@ const Application = require('../models/Application.model.js');
 
 
 // Apply for job
-router.post('/applications', (req, res, next) => {
-    const {jobId, userId, coverLetter, cv} = req.body;
+router.post('/', (req, res, next) => {
+    const {fullname, email, jobId, userId, coverLetter, cv} = req.body;
    
-    Application.create({jobId, userId, coverLetter, cv})
-      .then(response => res.json(response))
-      .catch(err => res.json(err));
+    console.log(req.body)
+    Application.create({fullname, email, jobId, userId, coverLetter, cv})
+      .then(response => {
+        res.json(response)})
+      .catch(err => {
+        console.log(err)
+        res.json(err)
+      }
+        );
   });
 
  // List all the jobs
-  router.get('/applications', (req, res, next) => {
+  router.get('/applications', (req, res, next) => { 
     Application.find()
 
       .then(jobs => res.json(jobs))
