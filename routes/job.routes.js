@@ -1,7 +1,8 @@
 const mongoose = require ('mongoose');
 const express = require ('express');
 const router = require ('express').Router();
-const Job = require("../models/job.model")
+const Job = require("../models/job.model");
+const { isAuthenticated } = require('../middleware/jwt.middleware');
 
 
 // Create a new job
@@ -28,12 +29,14 @@ router.get('/jobs/:id', (req, res, next) => {
 
     Job.findById(jobId)
         .then(job => res.json(job))
-        .catch(err => res.json(err));
+        .catch(err => {
+            console.log(err)
+            res.json(err)});
 });
 
 // Update a specific job by ID
 
-router.put('/jobs/:id', (req, res, next) => {
+router.put('/jobs/:id', isAuthenticated, (req, res, next) => {
     const jobId = req.params.id;
 
     console.log(req.body)
