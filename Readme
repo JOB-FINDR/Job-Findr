@@ -1,84 +1,23 @@
-# Initial planning
-- app idea
+Backend Readme
+Description
+This repository contains the backend code for the Job Board application. The backend is implemented with ExpressJS, MongoDB, and Mongoose, providing RESTful API endpoints for user authentication, job listings, and applications.
+Frontend Repository:https://github.com/JOB-FINDR/job-findr-frontend 
+
+Instructions to Run this App Locally:
+1- Clone the Repository:
+git clone <backend-repo-url>
 
 
-# MVP Planning
-- User 
-Authentication:
-Users should be able to create accounts and log in.
-- Job Listings:
-Users should be able to post job listings.
-Users should be able to browse job listings.
-- Job Applications:
-Users should be able to apply for jobs.
+2- Install Dependencies:
+npm install
+
+3- Environment Variables:
+Create a.env file in the root of the frontend directory.
+
+4- Run the Application:
+npm run dev
 
 
-## Models:
-## User Model: CR
-- Fields:
-- email: { type: String, unique: true, required: true },
-- password: { type: String, required: true },
-- name: { type: String, required: true },
-
-## Job Model: → CRUD
-Fields:
-title: { type: String, required: true } - The title of the job.
-company: { type: String, required: true } - The name of the hiring company.
-description: { type: String, required: true } - A detailed description of the job.
-salary: { type: Number } - The offered salary.
-
-## Application Model → CR
-Fields:
-jobId: { type: ObjectId, ref: 'Job', required: true } - Reference to the applied job.
-userId: { type: ObjectId, ref: 'User', required: true }
-coverLetter: { type: String } - Cover letter submitted by the user
-
-# Routes
-USER ROUTE --> C
-
-
-
-## JOB ROUTE --> CRUD
- [x] POST (create a new job)
- [x] GET (read all jobs)
- [x] GET (read specific job by id)
- [x] PUT (update the job by id)
- [x] DELETE ( delete the job)
-
-
-## APPLICATION ROUTE --> CR
-
- [] POST (Apply for the job)
- [] GET (See all the jobs)
-
-
-
-
-
-
-## REST API Endpoints:
-Authentication Endpoints:
-Sign-up: POST /api/auth/signup
-Login: POST /api/auth/login
-Logout: POST /api/auth/logout
-
-## Job Endpoints:
-Create Job Listing: POST /api/job
-Read All Job Listings: GET /api/jobs
-Read One Job Listing: GET /api/jobs/:id
-
-## Application Endpoints:
-Apply for Job: POST /api/applications
-View Applications: GET /api/applications
-Write a Cover Letter: PUT /api/applications/:id/cover-letter
-
-
-
-[x] Define your MVP 
-[x] what is the most essential functionality we need
-[x]Define Models 	   
-[x] what models do we need, what fields for each model
-[x]Define REST API endpoints
-
-
+Demo
+Visit https://job-findr-api.adaptable.app  to test the API.
 
