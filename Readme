@@ -1,23 +1,28 @@
-Backend Readme
-Description
-This repository contains the backend code for the Job Board application. The backend is implemented with ExpressJS, MongoDB, and Mongoose, providing RESTful API endpoints for user authentication, job listings, and applications.
-Frontend Repository:https://github.com/JOB-FINDR/job-findr-frontend 
-
-Instructions to Run this App Locally:
-1- Clone the Repository:
-git clone <backend-repo-url>
+# JOB FINDR 
+## Description
+- This repository contains the backend code for the Job Board application.
+- The backend is implemented with ExpressJS, MongoDB, and Mongoose.
+- providing RESTful API endpoints for user authentication, job listings, and applications.
 
 
-2- Install Dependencies:
-npm install
-
-3- Environment Variables:
-Create a.env file in the root of the frontend directory.
-
-4- Run the Application:
-npm run dev
+## Instructions to Run this App Locally:
+###  1- Clone the Repository in your VS Code:
+- git clone https://github.com/JOB-FINDR/job-findr-frontend 
 
 
-Demo
+### 2- Install Dependencies:
+- npm install
+
+### 3- Run the Application:
+- npm run dev
+
+### 4- Environment Variables:
+Create a .env file in the root of the backend directory and 
+save the API URL in this format -- 
+- PORT=5005
+- ORIGIN=http://localhost:5173
+- TOKEN_SECRET=y0uRt0k3N$eCr3T
+
+## Demo
 Visit https://job-findr-api.adaptable.app  to test the API.
 
