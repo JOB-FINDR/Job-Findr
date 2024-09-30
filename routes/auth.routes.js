@@ -43,7 +43,7 @@ router.post("/signup", (req, res, next) => {
     return;
   }
 
-  // Check the users collection if a user with the same email already exists
+  // Check if a user with the same email already exists
   User.findOne({ email })
     .then((foundUser) => {
       // If the user with the same email already exists, send an error response
